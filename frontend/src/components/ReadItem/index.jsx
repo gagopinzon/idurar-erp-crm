@@ -24,16 +24,18 @@ export default function ReadItem({ config }) {
   if (fields) readColumns = [...dataForRead({ fields: fields, translate: translate })];
   useEffect(() => {
     const list = [];
-    readColumns.map((props) => {
-      const propsKey = props.dataIndex;
-      const propsTitle = props.title;
-      const isDate = props.isDate || false;
-      let value = valueByString(currentResult, propsKey);
-      value = isDate ? dayjs(value).format(dateFormat) : value;
-      list.push({ propsKey, label: propsTitle, value: value });
-    });
+    if (readColumns && Array.isArray(readColumns)) {
+      readColumns.map((props) => {
+        const propsKey = props.dataIndex;
+        const propsTitle = props.title;
+        const isDate = props.isDate || false;
+        let value = valueByString(currentResult, propsKey);
+        value = isDate ? dayjs(value).format(dateFormat) : value;
+        list.push({ propsKey, label: propsTitle, value: value });
+      });
+    }
     setListState(list);
-  }, [currentResult]);
+  }, [currentResult, readColumns, dateFormat]);
 
   const show = isReadBoxOpen ? { display: 'block', opacity: 1 } : { display: 'none', opacity: 0 };
 

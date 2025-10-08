@@ -52,24 +52,41 @@ export default function CreateItem({ config, CreateForm }) {
   const [subTotal, setSubTotal] = useState(0);
   const [offerSubTotal, setOfferSubTotal] = useState(0);
   const handelValuesChange = (changedValues, values) => {
+    console.log('🔄 handelValuesChange - changedValues:', changedValues);
+    console.log('🔄 handelValuesChange - values:', values);
+    
     const items = values['items'];
     let subTotal = 0;
     let subOfferTotal = 0;
 
     if (items) {
-      items.map((item) => {
-        if (item) {
+      console.log('📋 Items encontrados:', items);
+      
+      items.map((item, index) => {
+        console.log(`📦 Item ${index}:`, item);
+        
+        // Solo procesar items que existen y tienen datos válidos
+        if (item && item.productId) {
           if (item.offerPrice && item.quantity) {
             let offerTotal = calculate.multiply(item['quantity'], item['offerPrice']);
             subOfferTotal = calculate.add(subOfferTotal, offerTotal);
           }
-          if (item.quantity && item.price) {
+          
+          // Usar el campo total si existe, sino calcularlo
+          if (item.total && item.total > 0) {
+            console.log(`💰 Usando total del item ${index}:`, item.total);
+            subTotal = calculate.add(subTotal, item.total);
+          } else if (item.quantity && item.price) {
             let total = calculate.multiply(item['quantity'], item['price']);
-            //sub total
+            console.log(`🧮 Calculando total del item ${index}:`, total);
             subTotal = calculate.add(subTotal, total);
           }
+        } else {
+          console.log(`⚠️ Item ${index} ignorado (vacío o sin producto):`, item);
         }
       });
+      
+      console.log('📊 SubTotal calculado:', subTotal);
       setSubTotal(subTotal);
       setOfferSubTotal(subOfferTotal);
     }
@@ -90,14 +107,23 @@ export default function CreateItem({ config, CreateForm }) {
     console.log('🚀 ~ onSubmit ~ fieldsValue:', fieldsValue);
     if (fieldsValue) {
       if (fieldsValue.items) {
-        let newList = [...fieldsValue.items];
-        newList.map((item) => {
-          item.total = calculate.multiply(item.quantity, item.price);
-        });
+        // Filtrar items vacíos y calcular totales
+        let newList = fieldsValue.items
+          .filter(item => item && item.productId) // Solo items con producto seleccionado
+          .map((item) => {
+            // Asegurar que el total esté calculado
+            if (item.quantity && item.price) {
+              item.total = calculate.multiply(item.quantity, item.price);
+            }
+            return item;
+          });
+        
         fieldsValue = {
           ...fieldsValue,
           items: newList,
         };
+        
+        console.log('📤 Datos a enviar:', fieldsValue);
       }
     }
     dispatch(erp.create({ entity, jsonData: fieldsValue }));

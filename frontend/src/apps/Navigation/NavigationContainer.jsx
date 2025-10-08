@@ -23,6 +23,7 @@ import {
   MenuOutlined,
   FileOutlined,
   ShopOutlined,
+  AppstoreOutlined,
   FilterOutlined,
   WalletOutlined,
   ReconciliationOutlined,
@@ -58,6 +59,21 @@ function Sidebar({ collapsible, isMobile = false }) {
       key: 'customer',
       icon: <CustomerServiceOutlined />,
       label: <Link to={'/customer'}>{translate('customers')}</Link>,
+    },
+    {
+      key: 'product',
+      icon: <AppstoreOutlined />,
+      label: <Link to={'/product'}>{translate('products')}</Link>,
+    },
+    {
+      key: 'productCategory',
+      icon: <TagsOutlined />,
+      label: <Link to={'/productCategory'}>{translate('products_category')}</Link>,
+    },
+    {
+      key: 'productBrand',
+      icon: <TagOutlined />,
+      label: <Link to={'/productBrand'}>{translate('brands')}</Link>,
     },
 
     {

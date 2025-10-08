@@ -276,7 +276,7 @@ export default function ReadItem({ config, selectedItem }) {
         </Col>
         <Divider />
       </Row>
-      {itemslist.map((item) => (
+      {itemslist && Array.isArray(itemslist) && itemslist.map((item) => (
         <Item key={item._id} item={item} currentErp={currentErp}></Item>
       ))}
       <div

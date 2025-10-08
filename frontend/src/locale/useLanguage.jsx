@@ -1,11 +1,17 @@
-const getLabel = (key) => {
+import { useSelector } from 'react-redux';
+import { selectAppSettings } from '@/redux/settings/selectors';
+import translation from './translation/translation';
+
+const getLabel = (key, langCode = 'es_es') => {
   try {
     const lowerCaseKey = key
       .toLowerCase()
       .replace(/[^a-zA-Z0-9]/g, '_')
       .replace(/ /g, '_');
 
-    // if (lang[lowerCaseKey]) return lang[lowerCaseKey];
+    const lang = translation[langCode] || translation['es_es'];
+    
+    if (lang[lowerCaseKey]) return lang[lowerCaseKey];
 
     // convert no found language label key to label
 
@@ -49,7 +55,10 @@ const getLabel = (key) => {
 };
 
 const useLanguage = () => {
-  const translate = (value) => getLabel(value);
+  const appSettings = useSelector(selectAppSettings);
+  const langCode = appSettings?.idurar_app_language || 'es_es';
+  
+  const translate = (value) => getLabel(value, langCode);
 
   return translate;
 };

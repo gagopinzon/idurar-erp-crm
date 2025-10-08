@@ -186,7 +186,7 @@ function LoadQuoteForm({ subTotal = 0, current = null }) {
           <p>{translate('Quantity')}</p>{' '}
         </Col>
         <Col className="gutter-row" span={4}>
-          <p>{translate('Price')}</p>
+          <p>{translate('unit_price')}</p>
         </Col>
         <Col className="gutter-row" span={5}>
           <p>{translate('Total')}</p>

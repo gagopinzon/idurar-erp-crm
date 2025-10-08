@@ -18,6 +18,16 @@ export default function CreateForm({ config, formElements, withUpload = false })
   const { panel, collapsedBox, readBox } = crudContextAction;
   const [form] = Form.useForm();
   const translate = useLanguage();
+
+  // Establecer valores iniciales por defecto para productos
+  useEffect(() => {
+    if (entity === 'product') {
+      form.setFieldsValue({
+        status: 'active',
+        enabled: true
+      });
+    }
+  }, [entity, form]);
   const onSubmit = (fieldsValue) => {
     // Manually trim values before submission
 

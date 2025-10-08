@@ -1,0 +1,186 @@
+
+> idurar-erp-crm@4.1.0 dev
+> nodemon src/server.js --ignore public/
+
+[33m[nodemon] 3.0.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Express running → On PORT : 8888
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:25
+      throw new Error(err.message);
+      ^
+
+Error: Cannot find module '/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/productCategoryController'
+Require stack:
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/routes/appRoutes/appApi.js
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/app.js
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/server.js
+    at /home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:25:13
+    at Array.forEach (<anonymous>)
+    at appControllers (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:16:25)
+    at Object.<anonymous> (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:38:18)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+
+Node.js v20.11.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8888
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (/home/mrgago/www/ERP/idurar-erp-crm/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/server.js:37:20)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+}
+
+Node.js v20.11.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: addrnode:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8888
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (/home/mrgago/www/ERP/idurar-erp-crm/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/server.js:37:20)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:25
+      throw/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:25
+      throw new Error(err.message);
+      ^
+
+Error: Cannot find module '/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/productController'
+Require stack:
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/routes/appRoutes/appApi.js
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/app.js
+- /home/mrgago/www/ERP/idurar-erp-crm/backend/src/server.js
+    at /home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:25:13
+    at Array.forEach (<anonymous>)
+    at appControllers (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:16:25)
+    at Object.<anonymous> (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/controllers/appControllers/index.js:38:18)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8888
+    at S[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8888
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (/home/mrgago/www/ERP/idurar-erp-crm/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/server.js:37:20)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+}
+
+Node.js v20.11.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+use :::8888
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (/home/mrgago/www/ERP/idurar-erp-crm/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/mrgago/www/ERP/idurar-erp-crm/backend/src/server.js:37:20)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+}
+
+Node.js v20.11.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m

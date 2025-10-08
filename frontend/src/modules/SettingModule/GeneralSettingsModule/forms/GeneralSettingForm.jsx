@@ -11,6 +11,26 @@ export default function GeneralSettingForm() {
   return (
     <div>
       <Form.Item
+        label={translate('Language')}
+        name="idurar_app_language"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Select
+          showSearch
+          style={{
+            width: '100%',
+          }}
+          options={[
+            { value: 'en_us', label: 'English (en_us)' },
+            { value: 'es_es', label: 'Español (es_es)' },
+          ]}
+        />
+      </Form.Item>
+      <Form.Item
         label={translate('Date Format')}
         name="idurar_app_date_format"
         rules={[
